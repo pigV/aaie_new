@@ -1,0 +1,270 @@
+body {
+    background: #ecf0f5;
+}
+
+select,input,option {
+		border: 1px solid #ccc;
+		color: #333;
+		height: 30px;
+		line-height: 30px;
+		padding-left: 5px;
+		width: 100px;
+}
+
+/* header begin */
+
+.header {
+    height: 60px;
+    background-color: #0084ca;
+    font-family: 'Microsoft YaHei';
+    color: #fff;
+    position: relative;
+    z-index: 900;
+}
+
+.sub-logo {
+    font-size: 25px;
+    line-height: 60px;
+    margin-left: 60px;
+}
+
+.oper-list {
+    overflow: hidden;
+    height: 60px;
+    padding-right: 10px;
+}
+
+.oper-list dd {
+    float: left;
+    height: 60px;
+    margin-left: 10px;
+    line-height: 60px;
+}
+
+.oper-list dd a {
+    display: block;
+    line-height: 60px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.down{
+    padding-left: 25px;
+		padding-right: 10px;
+    height: 60px;
+}
+.down:hover{
+    text-decoration: underline;
+}
+
+.user-image {
+    background: transparent url('../images/icon_user.png') no-repeat left center;
+}
+.time-image {
+    background: transparent url('../images/icon_time.png') no-repeat left center;
+}
+
+.halving-line {
+		background: transparent url('../images/icon_list.png') no-repeat left center;
+		width: 16px;
+    height: 32px;
+    display: block;
+    background-position: 0px -142px;
+    position: relative;
+    top: 19px;
+}
+
+/* container */
+
+.container {
+    font-family: '微软雅黑';
+}
+
+/* container left */
+
+.main-sidebar {
+		background-color: #222d32;
+		position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 230px;
+    z-index: 810;
+}
+
+.sidebar-menu {
+		padding-top: 80px;
+}
+
+.sidebar-menu li>a {
+		border-left: 3px solid transparent;
+		color: #fff;
+		position: relative;
+		padding: 12px 5px 12px 15px;
+		display: block;
+}
+
+.sidebar-menu li i {
+		background-image: url('../images/icon_list.png');
+		background-repeat: no-repeat;
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+    position: relative;
+		top: 3px;
+}
+
+.icon-list-1 {
+		background-position: 0 0;
+}
+.icon-list-2 {
+		background-position: 0 -17px;
+}
+.icon-list-3 {
+		background-position: 0 -37px;
+}
+.icon-list-4 {
+		background-position: 0 -57px;
+}
+.icon-list-5 {
+		background-position: 0 -77px;
+}
+
+.sidebar-menu>li:hover>a,.sidebar-menu>li.active>a {
+    color: #fff;
+    background: #1e282c;
+    border-left-color: #3c8dbc;
+}
+
+.sidebar-menu>li.active>a {
+    
+}
+
+.sidebar-menu li.active>div {
+		width: 0px;
+		height: 0px;
+		border: 10px solid transparent;
+		border-right: 10px solid #ecf0f5;
+		float: right;
+    position: relative;
+    right: 0;
+    top: -30px;
+}
+
+/* container right */
+
+.content-wrapper {
+		margin-left: 230px;
+		min-height: 185px;
+		z-index: 800;
+}
+
+.content {
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #fff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.box.box-blue {
+    border-top-color: #3c8dbc;
+}
+.box.box-red {
+    border-top-color: #dd4b39;
+}
+
+.box-body {
+		border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+.col-md-6 {
+		width: 30%;
+		float: left;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.queryContent {
+		margin: 15px auto;
+		padding: 0 60px;
+}
+
+.queryName {
+		padding-left: 30px;
+		float: left;
+		text-align: right;
+		padding-right: 5px;
+		height: 30px;
+    line-height: 30px;
+}
+.queryName-left {
+	padding-left: 0;
+}
+
+.queryInput {
+		width: 105px;
+    float: left;
+}
+.queryInput-left {
+		width: 276px;
+		float: left;
+}
+
+
+
+.queryButton {
+    background-color: #3c8dbc;
+    border-color: #367fa9;
+    box-shadow: none;
+    border-width: 1px;
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.content-wrapper table {
+		width: 100%;
+    text-align: center;
+}
+
+.content-wrapper table thead tr {
+		height: 40px;
+		font-weight: bold;
+}
+
+.content-wrapper table tbody tr {
+		height: 35px;
+}
+
+.content-wrapper table td {
+		border: 1px solid #f4f4f4;
+}
+
+
+
+
+
+/* img.html */
+
+.box-img {
+		min-height: 400px;
+}
+

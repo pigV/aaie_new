@@ -1,0 +1,238 @@
+
+
+
+.kpi-title {
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #dfe7f4;
+}
+
+
+.kpi-title-blue {
+    background: #80acfe;
+    border-top: 4px solid #0259fe;
+}
+.kpi-title-orange {
+    background: #fec48c;
+    border-top: 4px solid #fd8a1a;
+}
+.kpi-title-green {
+    background: #83dd96;
+    border-top: 4px solid #07bc2d;
+}
+
+.subscription{
+    width: 116px;  
+    height: 24px;  
+    margin-top: 18px;
+    background:transparent url(../images/arpu/subscription.png) no-repeat center top;  
+    cursor: pointer;
+}
+.subscription.active{
+    background-position: center bottom;
+}
+
+.oper-list dd select,
+.oper-list dd input {
+    width: 125px;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #e5ecf6;
+    border-radius: 5px;
+    text-indent: 5px;
+}
+
+input.dateInput{
+    background: #fff url(../images/arpu/date_bg.png) no-repeat right center;
+}
+
+.contentBox {
+    overflow: hidden;
+}
+
+.contentLeftBox {
+    min-height: 300px;
+    margin-right: 340px;
+    border-radius: 5px;
+}
+
+.col-32 {
+    width: 32%;
+    border: 1px solid #dfe7f4;
+}
+.width55{width: 55%;}
+
+.margin-auto {
+    margin: 0 auto;
+}
+.kpi-top-box {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.kpi-top-box dl{
+	height: 70px;
+	border-bottom: 2px solid #d2d2d2;
+}
+.kpi-top-box dl dt{
+	position: relative;
+	font-size: 36px;
+	color:#f7a623;
+    height: 70px;
+    line-height: 70px;
+	text-align: center;
+}
+.kpi-top-box dl dt:after{
+	position: absolute;
+	left: 50%;
+	bottom: -3px;
+	margin-left: -18px;
+	width: 36px;
+	height: 21px;
+	content: "";
+	background: transparent url(../images/arpu/arrow_up.png) no-repeat left top;
+}
+
+.kpi-top-box dl dd{
+	color: #535d5f;
+	font-size: 14px;
+	padding:15px 15px 0px;
+}
+.kpi-top-box dl dd p{
+	height: 20px;
+	line-height: 20px;
+}
+.kpi-top-box dl dd p i{
+	float: right;
+}
+.kpi-top-box dl dd p i.kpi-litre{
+	color: #e00000;
+}
+.kpi-top-box dl dd p i.kpi-drop{
+	color: #10a302;
+}
+.kpi-icon-litre {
+	 background-image: url('../images/arpu/kpi_arrows.png');  
+     background-repeat: no-repeat;  
+     width: 11px;  
+     height: 11px;  
+     background-position: 0 0;  
+     margin-top: 5px;
+}
+.kpi-icon-drop {
+	 background-image: url('../images/arpu/kpi_arrows.png');  
+     background-repeat: no-repeat;  
+     width: 11px;  
+     height: 11px;  
+     background-position: 0 -17px;  
+     margin-top: 5px;
+}
+
+.echart-box{
+	min-height: 150px;
+	margin: 0 10px;
+}
+
+
+
+.kpi-bottom-box{
+	border: 1px solid #dfe7f4;
+}
+.kpi-bottom-box .kpi-title{
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+.kpi-bottom-box .kpi-title select,
+.kpi-bottom-box .kpi-title label {
+	float: right;
+	margin-right: 5px;
+}
+.kpi-bottom-box .kpi-title select {
+	line-height: 51px;
+    height: 24px;
+    font-size: 14px;
+    border: 0;
+    margin-top: 8px;
+}
+
+
+.kpi-bottom-box p{
+	/* border-bottom: 1px solid #f00; */
+	padding:10px;
+}
+.arpu-echart{
+	height: 250px;
+	margin: 0 10px;
+}
+
+/* 右侧排名开始 */
+
+.contentRightBox {
+    width: 320px;
+    min-height: 300px;
+    border-radius: 5px;
+    border: 1px solid #dfe7f4;
+}
+
+.tab-box {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.tab-box li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #dfe7f4;
+}
+
+.tab-box li a {
+    display: block;
+    height: 50px;
+    color: #535d5f;
+}
+
+.tab-box li a.active{
+    background: #80acfe;
+    border-top: 4px solid #0259fe;
+    line-height: 40px;
+    height: 40px;
+    color: #fff;
+}
+
+.tab-content-box ol {
+    padding: 0px 25px 0px;
+}
+
+.tab-content-box ol li {
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #000;
+}
+
+.tab-content-box ol li i {
+    float: left;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #f7a623;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.tab-content-box ol li span {
+    float: right;
+}

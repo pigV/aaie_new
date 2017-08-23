@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.persistence.mapper.EtlProgressMapper">
+
+    <resultMap id="etlResultMap" type="com.persistence.model.EtlProgress">
+        <id column="JOBID" jdbcType="VARCHAR" property="jobId" />
+        <result column="JOBNAME" jdbcType="VARCHAR" property="jobName" />
+        <result column="RUN_FREQ" jdbcType="VARCHAR" property="runFreq" />
+        <result column="DATE_ARGS" jdbcType="VARCHAR" property="dateArgs" />
+        <result column="TASK_STATE" jdbcType="VARCHAR" property="taskState" />
+        <result column="AGENT" jdbcType="VARCHAR" property="agentCode" />
+        <result column="EXEC_TIME" jdbcType="VARCHAR" property="execTime" />
+        <result column="END_TIME" jdbcType="VARCHAR" property="endTime" />
+        <result column="USE_TIME" jdbcType="VARCHAR" property="useTime" />
+    </resultMap>
+    
+
+
+    
+    <select id="queryScheduleOfPage"  resultMap="etlResultMap">
+    SELECT * FROM (SELECT A.*, ROWNUM RN FROM (
+        select a.jobid ,a.jobname ,run_freq ,date_args ,
+			case when task_state=6 then '成功'
+			     when task_state=5 then '正在运行'
+			     when task_state=4 then '发送至MQ'
+			     when task_state=3 then '执行模式检测通过'
+			     when task_state=2 then '依赖检测通过'
+			     when task_state=1 then '创建/重做'
+			     when task_state=0 then '重做后续/创建当前'
+			     when (task_state =-1 or task_state =-2 or task_state =-3)  then '暂停状态'
+			     when task_state=-5 then '等待中断'
+			     when task_state=-6 then '失效'
+			     when task_state=-7 then '未触发'
+			     when task_state>=50 then '错误'
+			end task_state,
+			agent_code AGENT,exec_time ,end_time ,use_time 
+			  from bass1_interface_info a, proc_schedule_log b
+			 where a.jobid = b.proc_name
+			   and a.cycle_flag = 'day'
+			   and date_args = '2017-08-19' 
+			   and valid_flag = 0 and agent_code='agent@13'
+			   AND task_state=6
+			   
+			   ) A  
+			WHERE ROWNUM &lt;= ${pager.endPage} )
+		    WHERE RN &gt;= ${pager.startPage}
+    </select>
+    
+    <select id="queryScheduleTotal" resultType="java.lang.Integer" >
+          SELECT count(*) num FROM (
+          
+               select a.jobid ,a.jobname ,run_freq ,date_args ,
+			case when task_state=6 then '成功'
+			     when task_state=5 then '正在运行'
+			     when task_state=4 then '发送至MQ'
+			     when task_state=3 then '执行模式检测通过'
+			     when task_state=2 then '依赖检测通过'
+			     when task_state=1 then '创建/重做'
+			     when task_state=0 then '重做后续/创建当前'
+			     when (task_state =-1 or task_state =-2 or task_state =-3)  then '暂停状态'
+			     when task_state=-5 then '等待中断'
+			     when task_state=-6 then '失效'
+			     when task_state=-7 then '未触发'
+			     when task_state>=50 then '错误'
+			end task_state,
+			agent_code AGENT,exec_time ,end_time ,use_time 
+			  from bass1_interface_info a, proc_schedule_log b
+			 where a.jobid = b.proc_name
+			   and a.cycle_flag = 'day'
+			   and date_args = '2017-08-19' 
+			   and valid_flag = 0 and agent_code='agent@13'
+			   AND task_state=6
+            
+          )
+    </select>
+    
+    
+   
+</mapper>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>一经</title>
+    
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/arpu.css" />
+    <link rel="stylesheet" href="assets/css/oneChannels.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.cover.css" />
+    
+</head>
+
+<body>
+		<!-- 页头 -->
+		<div class="header">
+				<dl class="fright oper-list">
+	         <dd>
+	             <a href="javascript:void(0);" class="down user-image">张三</a>
+	         </dd>
+	         <dd>
+	             <i class="halving-line"></i>
+	         </dd>
+	         <dd>
+	             <a href="javascript:void(0);" class="down time-image">2017-08-21</a>
+	         </dd>
+	     </dl>
+	     <p class="sub-logo">数据质量保障系统</p>
+		</div>
+		<!-- /页头 -->
+		<div class="container">
+				<!-- 左侧列表 menuTabs("1100716","单","/portal/aibi_portal/submenu.jsp?ID=1100716")-->
+				<div class="main-sidebar">
+						<ul class="sidebar-menu">
+							<li class="active"><a onclick=""><i class="icon-list-1"></i> <span>一经接口ETL过程监控</span></a> <div></div></li>
+							<li><a onclick=""><i class="icon-list-2"></i> <span>接口上传校验返回监控</span></a> <div></div></li>
+							<li><a onclick=""><i class="icon-list-3"></i> <span>考核以及影响接口监控</span></a> <div></div></li>
+							<li><a onclick=""><i class="icon-list-4"></i> <span>其它监控</span></a> <div></div></li>
+							<li><a onclick=""><i class="icon-list-5"></i> <span>一经知识库</span></a> <div></div></li>
+							<!--
+			        <li class="active treeview">
+			          <a href="#">
+			            <i class="fa fa-dashboard"></i> <span>一经接口ETL过程监控</span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>一经接口ETL过程监控</a></li>
+			            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+			          </ul>
+			        </li>
+			        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+			        -->
+			      </ul>
+				</div>
+				<!-- /左侧列表 -->
+				<!-- 右侧 -->
+				<div class="content-wrapper">
+						<div class="content">
+								<div class="box box-blue">
+										<div class="box-body">
+												<div class="queryContent">
+														<div class="queryName queryName-left">状态</div>
+														<div class="queryInput">
+																<select id="state" name="state">
+						                        <option value="" selected>全部</option>
+						                        <option value="">运行中</option>
+						                        <option value="">运行成功</option>
+						                        <option value="">运行失败</option>
+						                    </select>
+														</div>
+														<div class="queryName">任务周期</div>
+														<div class="queryInput">
+						                    <select id="cycle" name="cycle">
+						                        <option value="" selected>全部</option>
+						                        <option value="">日</option>
+						                        <option value="">周</option>
+						                        <option value="">月</option>
+						                    </select>
+						                </div>
+														<div class="queryName">定时器时间点</div>
+														<div class="queryInput">
+						                    <select id="" name="">
+						                        <option value="" selected>全部</option>
+						                        <option value="">1月</option>
+						                        <option value="">2月</option>
+						                        <option value="">3月</option>
+						                    </select>
+						                </div>
+														<div class="queryName">任务名称</div>
+														<div class="queryInput">
+		                    				<input type="text" class="form-control" placeholder="任务名称">
+						                </div>
+						                <div class="clear"></div>
+												</div>
+												<div class="queryContent">
+														<div class="queryName queryName-left">创建时间范围</div>
+														<div class="queryInput-left">
+						                    <input type="text" class="form-control" placeholder="开始时间">
+						                    <span>-</span>
+						                    <input type="text" class="form-control" placeholder="结束时间">
+														</div>
+														<div class="queryName">日期批次</div>
+														<div class="queryInput">
+				                    		<input type="text" id="datepicker">
+														</div>
+														<div class="queryName">
+																<button type="button" class="btn queryButton">查询</button>
+														</div>
+														<div class="clear"></div>
+												</div>
+
+												
+                  	</div>
+										<div class="clear"></div>
+								</div>
+								<div class="box box-red">
+										<div class="box-body">
+												<table>
+													<thead>
+														<tr>
+															<td> </td>
+															<td>程序名称</td>
+															<td>程序中文名称</td>
+															<td>周期</td>
+															<td>日期批次</td>
+															<td>状态</td>
+															<td>Agent</td>
+															<td>当前负责人</td>
+															<td>创建时间</td>
+															<td>开始执行时间</td>
+															<td>执行结束时间</td>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td> </td>
+															<td>程序名称</td>
+															<td>程序中文名称</td>
+															<td>周期</td>
+															<td>日期批次</td>
+															<td>状态</td>
+															<td>Agent</td>
+															<td>当前负责人</td>
+															<td>创建时间</td>
+															<td>开始执行时间</td>
+															<td>执行结束时间</td>
+														</tr>
+													</tbody>
+												</table>
+										</div>
+								</div>
+						</div>
+				</div>
+				<!-- /右侧 -->
+		</div>
+</body>
+
+    <script src="assets/lib/jquery-1.10.2.js"></script>
+    <script src="assets/js/oneChannels.js"></script>
+    <script src="assets/lib/jquery-ui/jquery-ui-1.12.1.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+﻿/* 运行状态 */
+
+.task-state{
+  padding:3px 25px ;
+  background: #f00;
+  color: #fff;
+  border-radius: 3px;
+}
+.schedule-btn-box ol{
+  
+}
